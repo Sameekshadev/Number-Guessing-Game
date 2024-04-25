@@ -1,0 +1,95 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #5a875ab3;
+  overflow: hidden;
+}
+
+.container {
+  background: linear-gradient(to right, rgb(182, 124, 124), rgb(117, 157, 182));
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(167, 27, 27, 0.1);
+  padding: 30px;
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  position: absolute;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #9848ce;
+}
+
+p {
+  margin-top: 20px;
+  color: #794949;
+}
+
+input[type="number"],
+button {
+  padding: 10px 50px;
+  margin: 10px;
+  font-size: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="number"] {
+  width: calc(100% - 80px);
+  max-width: 300px;
+}
+
+button {
+  background-color: #5861e0ac;
+  color: #e0e0d4;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #7644c7;
+  transform: scale(1.05);
+}
+
+#confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#sadFaces {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.confetti {
+  position: relative;
+  animation: fall 3s infinite;
+}
+
+.sad-face {
+  position: relative;
+  animation: fall 3s infinite;
+}
+
+@keyframes fall {
+  100% {
+    transform: translateY(-100vh);
+  }
+  70% {
+    transform: translateY(100vh);
+  }
+}
